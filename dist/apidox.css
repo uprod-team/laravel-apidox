@@ -1,0 +1,377 @@
+/* Apidox — embedded CSS, no Tailwind required.
+ * Design: Trust & Authority. Navy + sky-blue accents.
+ * Compiled size target: ~10KB. */
+
+:root {
+    --apx-primary: #0f172a;
+    --apx-accent: #0369a1;
+    --apx-bg: #f8fafc;
+    --apx-bg-elevated: #ffffff;
+    --apx-border: #e2e8f0;
+    --apx-border-hover: #cbd5e1;
+    --apx-text: #1e293b;
+    --apx-text-muted: #64748b;
+    --apx-text-light: #94a3b8;
+    --apx-code-bg: #0f172a;
+    --apx-code-fg: #e2e8f0;
+    --apx-code-comment: #64748b;
+    --apx-method-get-bg: #d1fae5;
+    --apx-method-get-fg: #065f46;
+    --apx-method-post-bg: #dbeafe;
+    --apx-method-post-fg: #1e40af;
+    --apx-method-put-bg: #fef3c7;
+    --apx-method-put-fg: #92400e;
+    --apx-method-patch-bg: #fef3c7;
+    --apx-method-patch-fg: #92400e;
+    --apx-method-delete-bg: #fee2e2;
+    --apx-method-delete-fg: #991b1b;
+    --apx-badge-info-bg: #e0f2fe;
+    --apx-badge-info-fg: #075985;
+    --apx-badge-muted-bg: #f1f5f9;
+    --apx-badge-muted-fg: #475569;
+    --apx-callout-amber-bg: #fef3c7;
+    --apx-callout-amber-border: #fbbf24;
+    --apx-callout-amber-fg: #78350f;
+    --apx-required-fg: #b91c1c;
+    --apx-radius: 8px;
+    --apx-radius-lg: 12px;
+    --apx-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --apx-font-display: 'Lexend', var(--apx-font);
+    --apx-font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+body.apidox {
+    margin: 0;
+    background: var(--apx-bg);
+    color: var(--apx-text);
+    font-family: var(--apx-font);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.apidox a {
+    color: var(--apx-accent);
+    text-decoration: none;
+}
+
+body.apidox a:hover {
+    text-decoration: underline;
+}
+
+body.apidox code {
+    font-family: var(--apx-font-mono);
+    font-size: 0.875em;
+    background: #f1f5f9;
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: #1e293b;
+}
+
+body.apidox pre {
+    margin: 0;
+}
+
+.apidox-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+}
+
+.apidox-header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--apx-border);
+}
+
+.apidox-eyebrow {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.apidox-title {
+    font-family: var(--apx-font-display);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--apx-primary);
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+}
+
+.apidox-lead {
+    font-size: 17px;
+    color: var(--apx-text-muted);
+    margin: 0;
+    max-width: 640px;
+}
+
+.apidox-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .apidox-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.apidox-toc {
+    position: sticky;
+    top: 24px;
+    font-size: 13px;
+}
+
+.apidox-toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.apidox-toc-link {
+    display: block;
+    padding: 8px 12px;
+    color: var(--apx-text-muted);
+    border-radius: var(--apx-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 150ms, color 150ms;
+}
+
+.apidox-toc-link:hover {
+    background: #f1f5f9;
+    color: var(--apx-primary);
+    text-decoration: none;
+}
+
+.apidox-toc-sublink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 20px;
+    color: var(--apx-text-light);
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: var(--apx-radius);
+    transition: color 150ms;
+}
+
+.apidox-toc-sublink:hover {
+    color: var(--apx-primary);
+    text-decoration: none;
+}
+
+.apidox-toc-sublink code,
+.apidox-toc-sublink {
+    font-family: var(--apx-font-mono);
+}
+
+.apidox-main {
+    min-width: 0;
+}
+
+.apidox-section {
+    margin-bottom: 48px;
+    scroll-margin-top: 24px;
+}
+
+.apidox-h2 {
+    font-family: var(--apx-font-display);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--apx-primary);
+    margin: 0 0 12px;
+}
+
+.apidox-h3 {
+    font-family: var(--apx-font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--apx-primary);
+    margin: 24px 0 8px;
+}
+
+.apidox-h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--apx-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 20px 0 8px;
+}
+
+.apidox-code {
+    background: var(--apx-code-bg);
+    color: var(--apx-code-fg);
+    padding: 16px 20px;
+    border-radius: var(--apx-radius);
+    font-family: var(--apx-font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin: 12px 0;
+}
+
+.apidox-code code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+
+.apidox-code-inline {
+    font-size: 12px;
+}
+
+.apidox-callout {
+    padding: 12px 16px;
+    border-radius: var(--apx-radius);
+    margin: 16px 0;
+    border-left: 3px solid;
+    font-size: 14px;
+}
+
+.apidox-callout-amber {
+    background: var(--apx-callout-amber-bg);
+    border-color: var(--apx-callout-amber-border);
+    color: var(--apx-callout-amber-fg);
+}
+
+.apidox-endpoint {
+    background: var(--apx-bg-elevated);
+    border: 1px solid var(--apx-border);
+    border-radius: var(--apx-radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+    scroll-margin-top: 24px;
+}
+
+.apidox-endpoint-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.apidox-endpoint-uri {
+    font-family: var(--apx-font-mono);
+    font-size: 15px;
+    color: var(--apx-primary);
+    background: transparent;
+    padding: 0;
+    word-break: break-all;
+}
+
+.apidox-endpoint-summary {
+    font-family: var(--apx-font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--apx-primary);
+    margin: 12px 0 4px;
+}
+
+.apidox-endpoint-description {
+    color: var(--apx-text-muted);
+    margin: 4px 0 12px;
+}
+
+.apidox-endpoint-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.apidox-method {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: var(--apx-font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.apidox-method-get { background: var(--apx-method-get-bg); color: var(--apx-method-get-fg); }
+.apidox-method-post { background: var(--apx-method-post-bg); color: var(--apx-method-post-fg); }
+.apidox-method-put { background: var(--apx-method-put-bg); color: var(--apx-method-put-fg); }
+.apidox-method-patch { background: var(--apx-method-patch-bg); color: var(--apx-method-patch-fg); }
+.apidox-method-delete { background: var(--apx-method-delete-bg); color: var(--apx-method-delete-fg); }
+
+.apidox-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.apidox-badge-info {
+    background: var(--apx-badge-info-bg);
+    color: var(--apx-badge-info-fg);
+}
+
+.apidox-badge-muted {
+    background: var(--apx-badge-muted-bg);
+    color: var(--apx-badge-muted-fg);
+}
+
+.apidox-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.apidox-table th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--apx-text-muted);
+    font-weight: 600;
+    padding: 8px 12px 8px 0;
+    border-bottom: 1px solid var(--apx-border);
+}
+
+.apidox-table td {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+}
+
+.apidox-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.apidox-table code {
+    font-size: 12px;
+}
+
+.apidox-required {
+    color: var(--apx-required-fg);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.apidox-footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--apx-border);
+    text-align: center;
+    color: var(--apx-text-light);
+    font-size: 12px;
+}
