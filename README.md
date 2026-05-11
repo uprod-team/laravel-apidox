@@ -46,7 +46,7 @@ Apidox takes the opposite approach:
 - 🎨 **Embedded CSS** — Zero dependencies, ~10KB
 - 🛣 **Custom route** — Default `/developers`, change via config
 - 🌐 **i18n-friendly** — All copy in views (publishable)
-- 📦 **Laravel 11/12/13 · PHP 8.2/8.3/8.4**
+- 📦 **Laravel 9 → 13 · PHP 8.0 → 8.4**
 
 ---
 
