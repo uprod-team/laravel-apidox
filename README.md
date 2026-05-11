@@ -1,7 +1,7 @@
 # Apidox
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/privateevent/laravel.svg?style=flat-square)](https://packagist.org/packages/privateevent/laravel)
-[![Tests](https://img.shields.io/github/actions/workflow/status/privateevent/laravel/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/privateevent/laravel/actions)
+[![Tests](https://img.shields.io/github/actions/workflow/status/uprod-team/laravel-apidox/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/uprod-team/laravel-apidox/actions)
 [![Total Downloads](https://img.shields.io/packagist/dt/privateevent/laravel.svg?style=flat-square)](https://packagist.org/packages/privateevent/laravel)
 [![License](https://img.shields.io/packagist/l/privateevent/laravel.svg?style=flat-square)](LICENSE)
 

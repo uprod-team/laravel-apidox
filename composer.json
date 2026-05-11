@@ -10,6 +10,10 @@
             "email": "l.guyard@n2xlabs.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/uprod-team/laravel-apidox/issues",
+        "source": "https://github.com/uprod-team/laravel-apidox"
+    },
     "require": {
         "php": "^8.2",
         "illuminate/contracts": "^11.0|^12.0|^13.0",
